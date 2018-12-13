@@ -18,7 +18,7 @@ pipeline {
                 sh 'mv test'
             }
         }
-        stage('Package) {
+        stage('Package') {
             step {
                 echo 'Packaging...'
                 sh 'mv -DskipTests package'
