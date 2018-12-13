@@ -13,13 +13,13 @@ pipeline {
             }
         }
         stage('Test') {
-            step {
+            steps {
                 echo 'Testing...'
                 sh 'mv test'
             }
         }
         stage('Package') {
-            step {
+            steps {
                 echo 'Packaging...'
                 sh 'mv -DskipTests package'
                 archiveArtifacts artifacts: '**/target/*.jar', fingerprint: true
